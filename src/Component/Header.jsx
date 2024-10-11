@@ -41,12 +41,16 @@ const Header = () => {
         <Link to="/Product" onClick={closeDropDown}>
           SHOP
         </Link>
+        <div className="cartcontainer">
+          {" "}
+          <Link to="/CartTab" onClick={closeDropDown}>
+            CART <BsCart4 className="shoppingcart" />
+            <span>{totalQuantity}</span>
+          </Link>
+        </div>
+
         <Link to="/Checkout" onClick={closeDropDown}>
           CHECKOUT
-        </Link>
-        <Link to="/CartTab" onClick={closeDropDown}>
-          CART <BsCart4 className="shoppingcart" />
-          <span>{totalQuantity}</span>
         </Link>
       </div>
     </nav>

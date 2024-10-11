@@ -1,5 +1,5 @@
 import "../Styling/CartTab.css";
-
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CartList from "./CartList";
 function CartTab() {
@@ -13,8 +13,10 @@ function CartTab() {
           <CartList list={cart} key={key} />
         ))}
       </div>
-      <div className="control-button">
-        <button className="control">CHECKOUT</button>
+      <div>
+        <Link to="/Checkout" className="control">
+          Proceed to Checkout
+        </Link>
       </div>
     </div>
   );

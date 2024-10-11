@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../Styling/ProductCard.css";
 import { BsCart4 } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
+import { AiFillStar } from "react-icons/ai";
 import { addToCart } from "../Redux/cartSlice";
 import { useEffect } from "react";
 const ProductCard = ({ data }) => {
@@ -11,7 +12,7 @@ const ProductCard = ({ data }) => {
   useEffect(() => {
     console.log(cart);
   }, [cart]);
-  const { title, img, category, prevPrice, newPrice, slug } = data;
+  const { title, img, category, prevPrice, newPrice, slug, reviews } = data;
   //get dispatch function
   const dispatch = useDispatch();
   //handle addtocart function to increase the cart item when clicked
@@ -30,10 +31,15 @@ const ProductCard = ({ data }) => {
         <p className="old-price">{prevPrice}</p>
         <p className="new-price">${newPrice}.00</p>
       </span>
-      <button onClick={handleAddToCart} className="btn">
+      <p>
+        <AiFillStar className="star" />
+        <AiFillStar className="star" />
+        <AiFillStar className="star" /> {reviews}
+      </p>
+      <Link to="/CartTab" onClick={handleAddToCart} className="btn">
         <BsCart4 />
         Add to Cart
-      </button>
+      </Link>
     </div>
   );
 };

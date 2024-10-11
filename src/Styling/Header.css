@@ -15,22 +15,21 @@ nav {
   display: flex;
   gap: 60px;
   align-items: center;
-  position: relative;
 }
 .cart-listing {
   display: none;
 }
-
+.cartcontainer {
+  position: relative;
+}
 @media screen and (max-width: 480px) {
   .cart-listing {
     display: flex;
-
-    position: fixed;
     right: 70px;
   }
   .icons {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
     font-size: 28px;
     position: relative;
@@ -97,8 +96,8 @@ nav a span {
   border-radius: 50%;
   margin-left: 5px;
   position: absolute;
-  top: 17px;
-  right: 11px;
+  top: 70%;
+  right: 14%;
   font-size: 15px;
   font-family: "Times New Roman";
 }

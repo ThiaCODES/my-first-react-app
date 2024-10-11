@@ -1,19 +1,17 @@
 .container-list {
   min-height: 300px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container-list h1 {
-  margin: 10px;
+  margin: 10px 0px 60px 0px;
   text-decoration: underline;
 }
-.control {
-  padding: 5px;
-  margin: 15px;
+.container-list a {
   background-color: black;
   color: white;
-  padding: 4px;
-}
-.control-button {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  padding: 7px;
+  border-radius: 10px;
 }

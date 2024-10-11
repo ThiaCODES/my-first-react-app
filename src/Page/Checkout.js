@@ -32,6 +32,9 @@ const Checkout = () => {
   };
   const handlePayment = (e) => {
     const { name, value } = e.target;
+    if (name === "cvv" && value.length > 3) {
+      return;
+    }
     setPaymentMethod((state) => ({ ...state, [name]: value }));
   };
   const handleSubmit = (e) => {
@@ -41,6 +44,9 @@ const Checkout = () => {
     const item = cartItems.find((item) => item.slug === product.slug);
     return accumulator + product.newPrice * item.quantity;
   }, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Log the total price to verify
   console.log(totalPrice);
@@ -81,7 +87,7 @@ const Checkout = () => {
             />
             <input
               className="input-details"
-              type="text"
+              type="number"
               name="postalCode"
               placeholder="Postal Code"
               value={shippingDetail.postalCode}
@@ -103,7 +109,7 @@ const Checkout = () => {
             <h3>Payment Information</h3>
             <input
               className="input-details"
-              type="text"
+              type="number"
               name="cardNumber"
               placeholder="Card Number"
               value={paymentMethod.cardNumber}
@@ -112,7 +118,7 @@ const Checkout = () => {
             />
             <input
               className="input-details"
-              type="text"
+              type="month"
               name="expiryDate"
               placeholder="Expiry Date (MM/YY)"
               value={paymentMethod.expiryDate}
@@ -121,8 +127,10 @@ const Checkout = () => {
             />
             <input
               className="input-details"
-              type="text"
+              type="number"
               name="cvv"
+              min="100"
+              max="999"
               placeholder="CVV"
               value={paymentMethod.cvv}
               onChange={handlePayment}

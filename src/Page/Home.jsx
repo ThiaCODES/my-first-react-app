@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div>
       <div className="first-line">
-        <h1>Limited Time Offer: 25% Off Every Step You Take!</h1>
+        <h1 className="first">
+          Limited Time Offer: 25% Off Every Step You Take!
+        </h1>
       </div>
       <Image />
       <Product />

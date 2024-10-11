@@ -19,14 +19,18 @@
   text-decoration: line-through;
 }
 .btn {
-  margin: 10px auto;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  margin: 20px auto;
   border: none;
-  width: 150px;
+  padding: 5px;
+  width: 120px;
   font-size: 17px;
   font-weight: bold;
   transition: 0.3s;
 }
-button:hover {
+.btn:hover {
   background-color: dimgrey;
   transform: scale(1.01);
   color: rgb(20, 15, 15);

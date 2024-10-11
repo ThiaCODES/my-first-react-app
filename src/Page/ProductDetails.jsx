@@ -39,6 +39,9 @@ const ProductDetails = () => {
       <div>No Description Found</div>;
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   //remove from quantity
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
@@ -73,36 +76,71 @@ const ProductDetails = () => {
           </div>
 
           <div className="text">
-            <h2>About this item</h2>
-            <p>
-              <AiFillStar className="star" />
-              <AiFillStar className="star" />
-              <AiFillStar className="star" /> {details.reviews}
-            </p>
-            <p>Price: ${details.newPrice}.00</p>
-            <p>Company: {details.company}</p>
-            <p>Color: {details.color}</p>
-            <p>Category: {details.category}</p>
-            <h2>Product details</h2>
-            <p>
-              <strong>Fabric type:</strong>100% Leather
-            </p>
-            <p>
-              <strong>Machine Wash:</strong> Machine Wash
-            </p>
-            <p>
-              <strong>Origin:</strong> Imported
-            </p>
-            <p>
-              <strong>Sole material:</strong> Rubber
-            </p>
-            <p>
-              <strong>Description: </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              ducimus nostrum illum voluptatibus numquam similique ullam
-              cupiditate. Eius ab fugit inventore numquam animi quae commodi
-              velit. Quibusdam expedita quidem quis.
-            </p>
+            <h2>PRODUCT DETAILS</h2>
+
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Price:</strong>
+                  </td>
+                  <td>${details.newPrice}.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Company:</strong>
+                  </td>
+                  <td>{details.company}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Color:</strong>
+                  </td>
+                  <td>{details.color}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Category:</strong>
+                  </td>
+                  <td>{details.category}</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Fabric type:</strong>
+                  </td>
+                  <td>100% Leather</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Machine Wash:</strong>
+                  </td>
+                  <td>Machine Wash</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Origin:</strong>
+                  </td>
+                  <td>Imported</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Sole material:</strong>
+                  </td>
+                  <td>Rubber</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Description:</strong>
+                  </td>
+                  <td>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    ducimus nostrum illum voluptatibus numquam similique ullam
+                    cupiditate. Eius ab fugit inventore numquam animi quae
+                    commodi velit. Quibusdam expedita quidem quis.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       ) : (
