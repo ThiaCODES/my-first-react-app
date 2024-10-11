@@ -1,7 +1,7 @@
 import "../Styling/ProductDetails.css";
 import { useParams } from "react-router-dom";
 import { addToCart } from "../Redux/cartSlice";
-import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import data from "../Db/data";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -33,7 +33,6 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     //dispatching action with product details and quantity of items
     if (details) {
-      const { title, img, category, prevPrice, newPrice } = details;
       dispatch(addToCart({ slug, quantity: quantity }));
     } else {
       <div>No Description Found</div>;
@@ -72,6 +71,9 @@ const ProductDetails = () => {
               <button onClick={handleAddToCart} className="add">
                 Add to Cart
               </button>
+              <Link to="/CartTab" className="add">
+                Proceed to Cart
+              </Link>
             </div>
           </div>
 
