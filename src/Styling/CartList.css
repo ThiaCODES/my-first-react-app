@@ -1,0 +1,49 @@
+.shopping-img {
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+}
+.shopping {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 10px;
+  font-weight: 100px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  align-items: center;
+}
+.shopping-details {
+  display: flex;
+}
+.shopping-text {
+  width: 100px;
+  text-align: left;
+  margin-left: 10px;
+  padding-top: 20px;
+}
+.shopping-price {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.quantity-controlbtn {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.quantity-controlbtn button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+.quantity-controlbtn span {
+  font-size: 20px;
+  background-color: black;
+}

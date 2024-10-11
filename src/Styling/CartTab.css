@@ -1,0 +1,19 @@
+.container-list {
+  min-height: 300px;
+}
+.container-list h1 {
+  margin: 10px;
+  text-decoration: underline;
+}
+.control {
+  padding: 5px;
+  margin: 15px;
+  background-color: black;
+  color: white;
+  padding: 4px;
+}
+.control-button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}

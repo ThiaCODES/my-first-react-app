@@ -1,0 +1,78 @@
+.checkout-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin: 50px;
+  gap: 50px;
+}
+.details {
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(116, 114, 114);
+  min-width: 300px;
+  max-width: 400px;
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+.input-details {
+  width: 80%;
+
+  margin: 0 auto;
+}
+
+.payment {
+  border-radius: 20px;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+  background-color: rgb(116, 114, 114);
+  padding-top: 30px;
+  text-align: center;
+}
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  min-width: 300px;
+  padding: 10px;
+  background-color: rgb(116, 114, 114);
+  align-items: center;
+}
+.heading {
+  margin-top: 40px;
+  text-decoration: underline;
+}
+.orderbtn {
+  width: 100px;
+  border-radius: 30px;
+  height: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.orderbtn:hover {
+  background-color: black;
+  color: white;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+li {
+  list-style: none;
+}

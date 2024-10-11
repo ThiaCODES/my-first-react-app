@@ -1,0 +1,33 @@
+.Productcard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 300px;
+  border: 1px solid black;
+}
+.Productcard img {
+  width: 110px;
+}
+.price {
+  display: flex;
+  gap: 50px;
+}
+.old-price {
+  text-decoration: line-through;
+}
+.btn {
+  margin: 10px auto;
+  border: none;
+  width: 150px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: dimgrey;
+  transform: scale(1.01);
+  color: rgb(20, 15, 15);
+}

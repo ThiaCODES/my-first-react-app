@@ -1,0 +1,109 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  align-items: center;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0 20px;
+}
+.dropdown {
+  display: none;
+}
+.links {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+.cart-listing {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .cart-listing {
+    display: flex;
+
+    position: fixed;
+    right: 70px;
+  }
+  .icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 28px;
+    position: relative;
+  }
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0px; /* Distance from the top */
+    right: 10px; /* Position from the right */
+    background-color: rgb(32, 30, 30);
+    color: black;
+    z-index: 1;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown {
+    display: block;
+  }
+  .show {
+    display: flex;
+    position: relative;
+    border-radius: 6px;
+  }
+  .show a {
+    color: white;
+  }
+  .brand-name {
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+  }
+}
+input {
+  width: 40rem;
+  padding: 8px;
+  text-align: center;
+  font-size: 17px;
+  border-radius: 20px;
+  outline: none;
+  border: black solid 1px;
+}
+.shopping {
+  position: relative;
+}
+.shoppingcart {
+  background-color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  color: black;
+}
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+nav a span {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 50%;
+  margin-left: 5px;
+  position: absolute;
+  top: 17px;
+  right: 11px;
+  font-size: 15px;
+  font-family: "Times New Roman";
+}
+.brand-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

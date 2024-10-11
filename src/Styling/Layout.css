@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+  width: 100vw;
+}
+.first-line {
+  margin: 30px;
+  font-family: "Source Serif 4", serif;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  padding: 5px;
+}
