@@ -49,7 +49,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 400px;
+  height: 400px;
+  overflow-y: scroll;
   border-radius: 20px;
   min-width: 300px;
   max-width: 310px;
