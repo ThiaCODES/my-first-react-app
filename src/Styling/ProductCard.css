@@ -9,6 +9,9 @@
   border: 1px solid black;
   margin: 20px;
 }
+.Productcard a {
+  color: black;
+}
 .Productcard img {
   width: 100px;
   max-height: 100px;

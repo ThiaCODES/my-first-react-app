@@ -22,10 +22,11 @@ const ProductCard = ({ data }) => {
 
   return (
     <div className="Productcard">
+      {" "}
+      <img src={img} alt={title} />
       <Link to={slug}>
-        <img src={img} alt={title} />
+        <h3>{title}</h3>
       </Link>
-      <h3>{title}</h3>
       <p>{category}</p>
       <span className="price">
         <p className="old-price">{prevPrice}</p>
@@ -36,10 +37,10 @@ const ProductCard = ({ data }) => {
         <AiFillStar className="star" />
         <AiFillStar className="star" /> {reviews}
       </p>
-      <Link to="/CartTab" onClick={handleAddToCart} className="btn">
+      <button onClick={handleAddToCart} className="btn">
         <BsCart4 />
         Add to Cart
-      </Link>
+      </button>
     </div>
   );
 };
