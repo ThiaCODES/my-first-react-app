@@ -1,6 +1,6 @@
 .container-list {
   min-height: 300px;
-  margin: 50px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

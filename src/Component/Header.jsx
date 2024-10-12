@@ -1,14 +1,13 @@
 import "../Styling/Header.css";
 import { Link } from "react-router-dom";
 import { BsCart4 } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 const Header = () => {
-  const { slug } = useParams();
   const carts = useSelector((store) => store.cart.cartItems);
   console.log(carts);
   const [totalQuantity, setTotalQuantity] = useState(0);
@@ -16,7 +15,7 @@ const Header = () => {
     let total = 0;
     carts.forEach((cart) => (total += cart.quantity));
     setTotalQuantity(total);
-  });
+  }, [carts]);
   const [dropDown, setDropDown] = useState(false);
   const toggleDropDown = (e) => {
     setDropDown(!dropDown);
@@ -38,12 +37,16 @@ const Header = () => {
       </div>
 
       <div className={`links ${dropDown ? "show" : ""}`}>
+        <h1 className="close" onClick={closeDropDown}>
+          {" "}
+          X
+        </h1>
         <Link to="/Product" onClick={closeDropDown}>
           SHOP
         </Link>
         <div className="cartcontainer">
           {" "}
-          <Link to="/CartTab" onClick={closeDropDown}>
+          <Link to="/CartTab" onClick={closeDropDown} className="carting">
             CART <BsCart4 className="shoppingcart" />
             <span>{totalQuantity}</span>
           </Link>

@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import data from "../Db/data";
 import "../Styling/Checkout.css";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const cartItems = useSelector((store) => store.cart.cartItems);
   const [ProductDetails, setDetails] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const details = cartItems
@@ -39,6 +41,7 @@ const Checkout = () => {
   };
   const handleSubmit = (e) => {
     alert("You have successfully placed your order");
+    navigate("/");
   };
   const totalPrice = ProductDetails.reduce((accumulator, product) => {
     const item = cartItems.find((item) => item.slug === product.slug);

@@ -5,11 +5,13 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  height: 300px;
+  height: 320px;
   border: 1px solid black;
+  margin: 20px;
 }
 .Productcard img {
-  width: 110px;
+  width: 100px;
+  max-height: 100px;
 }
 .price {
   display: flex;

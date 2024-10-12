@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-sections">
           {/* About Us Section */}
           <div className="footer-section">
-            <h3>About Us</h3>
+            <h3 className="heading">About Us</h3>
             <p>
               Welcome to Thiamy Shoes, your one-stop shop for all kinds of
               stylish footwear. We are dedicated to bringing you the best
@@ -33,19 +33,19 @@ const Footer = () => {
             <h3 className="heading">Quick Links</h3>
             <ul>
               <li>
-                <a href="">About Us</a>
+                <button>About Us</button>
               </li>
               <li>
-                <a href="">Shop</a>
+                <button>Shop</button>
               </li>
               <li>
-                <a href="">FAQs</a>
+                <button>FAQs</button>
               </li>
               <li>
-                <a href="">Contact Us</a>
+                <button>Contact Us</button>
               </li>
               <li>
-                <a href="">Privacy Policy</a>
+                <button>Privacy Policy</button>
               </li>
             </ul>
           </div>
@@ -55,17 +55,13 @@ const Footer = () => {
             <h3 className="heading">Follow Us</h3>
             <ul className="social-links">
               <li>
-                <a href="#">Facebook</a>
+                <button>Fcebook</button>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">
-                  Twitter
-                </a>
+                <button> Twitter</button>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">
-                  Instagram
-                </a>
+                <button>Instagram</button>
               </li>
             </ul>
           </div>
