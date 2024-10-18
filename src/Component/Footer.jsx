@@ -19,10 +19,8 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="heading">Contact Information</h3>
             <ul>
-              <li>
-                Address: 15 Fashion Street, Victoria Island, Lagos, Nigeria
-              </li>
-              <li>Phone: +234 800 123 4567</li>
+              <li>Address: 15 Fashion Street, Lagos, Nigeria</li>
+              <li>Phone: +234 230 423 8857</li>
               <li>Email: support@thiamyshoes.ng</li>
               <li>Working Hours: Mon - Fri, 9:00 AM - 5:00 PM</li>
             </ul>
